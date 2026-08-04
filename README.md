@@ -17,3 +17,7 @@ My first project in TripleTen's AI-Assisted Software Engineering program. It inc
 - JavaScript (ES6 Modules)
 - Git
 - GitHub
+
+## Deployed Site
+
+Check out [this site](https://lanzpascual17-cyber.github.io/ai-se_project_flashcards/) on GitHub Pages.

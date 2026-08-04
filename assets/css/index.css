@@ -1,0 +1,20 @@
+@import url("../vendor/normalize.css");
+@import url("./page.css");
+@import url("./header.css");
+@import url("./nav.css");
+@import url("./footer.css");
+@import url("./deck.css");
+@import url("./decks.css");
+@import url("./carousel.css");
+[hidden] {
+  display: none !important;
+}
+
+h1 {
+  margin: 0;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
