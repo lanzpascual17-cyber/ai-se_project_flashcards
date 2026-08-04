@@ -57,9 +57,47 @@
                 </div>
               </li>
             </template>
+            <template id="card-template">
+              <li class="gallery__item card card_color_green">
+                <h3 class="card__title"></h3>
+
+                <div class="card__row">
+                  <button
+                    class="card__flip-btn"
+                    type="button"
+                    aria-label="Flip card"
+                  >
+                    Flip
+                  </button>
+
+                  <button
+                    class="card__delete-btn"
+                    type="button"
+                    aria-label="Delete card"
+                  >
+                    <img src="assets/images/delete.svg" alt="" />
+                  </button>
+                </div>
+              </li>
+            </template>
             <li class="gallery__item gallery__new">
               <button class="gallery__new-card-btn" type="button">
                 New Deck
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="gallery" id="deck-view">
+        <div class="gallery__header">
+          <h2 class="gallery__title"></h2>
+          <button class="gallery__practice-btn" type="button">Practice</button>
+        </div>
+        <div class="gallery__wrapper">
+          <ul class="gallery__list">
+            <li class="gallery__item gallery__new">
+              <button class="gallery__new-card-btn" type="button">
+                New Card
               </button>
             </li>
           </ul>
