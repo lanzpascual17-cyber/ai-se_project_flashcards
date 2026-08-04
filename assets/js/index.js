@@ -2,40 +2,40 @@ import { decks, getDeckByID } from "./decks.js";
 import { hexToString, removeColorClasses } from "./colors.js";
 import { renderCarouselView } from "./carousel.js";
 
-const deckTemplate = document.querySelector("#deck-template");
-const deckList = document.querySelector(".decks__list");
+const cardTemplate = document.querySelector("#deck-template");
+const cardList = document.querySelector(".gallery__list");
 const homeSection = document.querySelector("#home");
 const notFoundSection = document.querySelector("#not-found");
 const carouselSection = document.querySelector("#carousel");
 
-function createDeckEl(deckData) {
-  const deckEl = deckTemplate.content.firstElementChild.cloneNode(true);
-  const deckTitle = deckEl.querySelector(".deck__title");
-  const deckLink = deckEl.querySelector(".deck__link");
-  deckLink.href = `#carousel/${deckData.id}`;
+function createCardEl(deckData) {
+  const cardEl = cardTemplate.content.firstElementChild.cloneNode(true);
+  const cardTitle = cardEl.querySelector(".card__title");
+  const cardLink = cardEl.querySelector(".card__link");
+  cardLink.href = `#carousel/${deckData.id}`;
 
   const colorName = hexToString(deckData.color);
-  removeColorClasses(deckEl);
-  deckEl.classList.add(`deck_color_${colorName}`);
-  const deleteButton = deckEl.querySelector(".deck__delete-btn");
-  const deckCount = deckEl.querySelector(".deck__count");
-  deckCount.textContent = `${deckData.cards.length} cards`;
+  removeColorClasses(cardEl);
+  cardEl.classList.add(`card_color_${colorName}`);
+  const deleteButton = cardEl.querySelector(".card__delete-btn");
+  const cardCount = cardEl.querySelector(".card__count");
+  cardCount.textContent = `${deckData.cards.length} cards`;
 
   deleteButton.addEventListener("click", () => {
-    deckEl.remove();
+    cardEl.remove();
   });
 
-  deckTitle.textContent = deckData.name;
-  return deckEl;
+  cardTitle.textContent = deckData.name;
+  return cardEl;
 }
 
-function renderDeckEl(deckData) {
-  const deckEl = createDeckEl(deckData);
+function renderCardEl(deckData) {
+  const cardEl = createCardEl(deckData);
 
-  deckList.prepend(deckEl);
+  cardList.prepend(cardEl);
 }
 
-decks.forEach(renderDeckEl);
+decks.forEach(renderCardEl);
 
 function renderHomeView() {
   homeSection.hidden = false;
