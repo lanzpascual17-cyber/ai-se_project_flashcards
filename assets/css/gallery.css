@@ -5,6 +5,11 @@
   font-size: 40px;
   font-weight: 700;
 }
+.gallery__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .gallery__new-card-btn {
   border: none;
   width: 325px;

@@ -19,7 +19,7 @@
   font-weight: 700;
   line-height: 1.2;
 }
-.card__delete-btn {
+.card__btn {
   background-color: transparent;
   margin: 0;
   cursor: pointer;
@@ -30,11 +30,22 @@
   border: none;
   padding: 0;
   z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
-.card__delete-btn:hover {
+
+.card__btn:hover {
   opacity: 1;
 }
 
+.card__btn_type_flip {
+  background-image: url("../images/flip.svg");
+}
+
+.card__btn_type_delete {
+  background-image: url("../images/delete.svg");
+}
 .card__row {
   display: flex;
   justify-content: space-between;
@@ -75,4 +86,7 @@
   position: absolute;
   inset: 0;
   z-index: 1;
+}
+.card_flipped {
+  background-color: #fff;
 }
