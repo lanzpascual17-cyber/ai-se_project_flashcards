@@ -12,3 +12,8 @@
 .nav__item {
   margin-left: 20px;
 }
+@media screen and (max-width: 393px) {
+  .nav__item {
+    margin-left: 12px;
+  }
+}

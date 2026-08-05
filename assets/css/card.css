@@ -90,3 +90,10 @@
 .card_flipped {
   background-color: #fff;
 }
+@media screen and (max-width: 393px) {
+  .card {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 65 / 41;
+  }
+}
