@@ -1,15 +1,15 @@
 @media screen and (max-width: 393px) {
-  .gallery__new-card-btn {
+  .gallery__new-card-btn,
+  .gallery__practice-btn {
     position: fixed;
     bottom: 63px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
     z-index: 2;
-    width: calc(100% - 40px);
-    max-width: 353px;
     height: auto;
     aspect-ratio: auto;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     padding: 20px;
     font-size: 24px;
@@ -17,8 +17,39 @@
     line-height: 1;
     border-radius: 12px;
 
+    border: none;
+    outline: none;
+
     background-color: #1a1a1a;
     color: #fff;
+  }
+  .gallery__new-card-btn {
+    width: calc(100% - 40px);
+    max-width: 353px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+  }
+  .gallery__practice-btn {
+    position: fixed;
+    bottom: 63px;
+    left: auto;
+    right: 20px;
+    width: 170px;
+    height: 52px;
+    box-sizing: border-box;
+  }
+
+  .gallery__new-card-btn_location_deck-view {
+    position: fixed;
+    bottom: 63px;
+    left: 20px;
+    right: auto;
+    width: 170px;
+    max-width: none;
+    height: 52px;
+    margin: 0;
+    box-sizing: border-box;
   }
   .page::after {
     content: "";
