@@ -97,11 +97,30 @@
 .carousel__btn_type_flip::before {
   background-image: url("../images/flip.svg");
 }
-.carousel__row {
-  display: flex;
+.carousel__grid {
+  display: grid;
   gap: 20px;
+  grid-template-areas:
+    "left card right"
+    ". flip .";
+  grid-template-columns: 44px auto 44px;
   align-items: center;
   justify-content: center;
+}
+.carousel__btn_type_left {
+  grid-area: left;
+}
+
+.carousel__card {
+  grid-area: card;
+}
+
+.carousel__btn_type_right {
+  grid-area: right;
+}
+
+.carousel__btn_type_flip {
+  grid-area: flip;
 }
 
 .carousel__btn:disabled {
