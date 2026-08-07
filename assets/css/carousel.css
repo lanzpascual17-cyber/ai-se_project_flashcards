@@ -126,3 +126,26 @@
 .carousel__btn:disabled {
   cursor: default;
 }
+
+@media screen and (max-width: 393px) {
+  .carousel__grid {
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      "card card card"
+      "left flip right";
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+  .carousel__btn_type_left,
+  .carousel__btn_type_flip,
+  .carousel__btn_type_right {
+    transform: translateX(25px);
+  }
+  .carousel__card {
+    width: 100%;
+    max-width: 353px;
+    height: 420px;
+  }
+}
