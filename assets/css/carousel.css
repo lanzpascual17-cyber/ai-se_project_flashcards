@@ -128,9 +128,12 @@
 }
 
 @media screen and (max-width: 393px) {
+  .carousel {
+    margin-top: 146px;
+  }
   .carousel__grid {
     display: grid;
-    gap: 20px;
+    gap: 32px;
     grid-template-areas:
       "card card card"
       "left flip right";
@@ -138,14 +141,20 @@
     align-items: center;
     justify-content: center;
   }
-  .carousel__btn_type_left,
-  .carousel__btn_type_flip,
+  .carousel__btn_type_left {
+    justify-self: start;
+  }
+
+  .carousel__btn_type_flip {
+    justify-self: center;
+  }
+
   .carousel__btn_type_right {
-    transform: translateX(25px);
+    justify-self: end;
   }
   .carousel__card {
     width: 100%;
     max-width: 353px;
-    height: 420px;
+    height: 480px;
   }
 }
