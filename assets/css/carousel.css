@@ -2,6 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  min-height: 0;
+  margin-top: 120px;
 }
 .carousel__title {
   font-size: 14px;
@@ -107,27 +110,29 @@
 .carousel__grid {
   display: grid;
   gap: 20px;
-  grid-template-areas:
-    "left card right"
-    ". flip .";
-  grid-template-columns: 44px auto 44px;
+  grid-template-columns: auto auto;
   align-items: center;
   justify-content: center;
 }
 .carousel__btn_type_left {
-  grid-area: left;
+  grid-column: 1;
+  grid-row: 1;
 }
 
 .carousel__card {
-  grid-area: card;
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .carousel__btn_type_right {
-  grid-area: right;
+  grid-column: 3;
+  grid-row: 1;
 }
 
 .carousel__btn_type_flip {
-  grid-area: flip;
+  grid-column: 2;
+  grid-row: 2;
+  justify-self: center;
 }
 
 .carousel__btn:disabled {
@@ -162,6 +167,7 @@
   .carousel__card {
     width: 100%;
     max-width: 353px;
-    height: 480px;
+    height: 420px;
+    grid-area: card;
   }
 }

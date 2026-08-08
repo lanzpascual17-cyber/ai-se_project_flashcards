@@ -1,13 +1,20 @@
+import { hexToString, removeColorClasses } from "./colors.js";
+
 const deckViewSection = document.querySelector("#deck-view");
 const flashcardTemplate = document.querySelector("#card-template");
 
 const deckViewTitle = deckViewSection.querySelector(".gallery__title");
 const deckViewList = deckViewSection.querySelector(".gallery__list");
 
-function createFlashcardEl(cardData) {
+function createFlashcardEl(cardData, deckColor) {
   const flashcardEl =
     flashcardTemplate.content.firstElementChild.cloneNode(true);
 
+  const colorName = hexToString(deckColor);
+  console.log(deckColor, colorName);
+
+  removeColorClasses(flashcardEl);
+  flashcardEl.classList.add(`card_color_${colorName}`);
   const flashcardTitle = flashcardEl.querySelector(".card__title");
   const flipButton = flashcardEl.querySelector(".card__btn_type_flip");
   const deleteButton = flashcardEl.querySelector(".card__btn_type_delete");
@@ -37,7 +44,7 @@ function renderDeckView(deck) {
   deckViewList.querySelectorAll(".card").forEach((cardEl) => cardEl.remove());
 
   deck.cards.forEach((cardData) => {
-    const flashcardEl = createFlashcardEl(cardData);
+    const flashcardEl = createFlashcardEl(cardData, deck.color);
     deckViewList.prepend(flashcardEl);
   });
 }
