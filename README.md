@@ -8,6 +8,8 @@ My first project in TripleTen's AI-Assisted Software Engineering program. It inc
 - View flashcards in a carousel
 - Navigate through flashcards using previous and next buttons
 - Flip cards to reveal questions and answers
+- Open individual decks to view their cards
+- Responsive design for different screen sizes
 - Hash-based navigation between views
 
 ## Technologies Used
