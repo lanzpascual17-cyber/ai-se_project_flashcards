@@ -84,17 +84,17 @@
   background-position: center;
   background-size: 20px 20px;
 
-  opacity: 0.5;
+  opacity: 0.8;
 }
 .carousel__btn:hover::before {
   opacity: 1;
 }
 .carousel__btn:disabled::before {
-  opacity: 0.2;
+  opacity: 0.4;
 }
 
 .carousel__btn:disabled:hover::before {
-  opacity: 0.2;
+  opacity: 0.4;
 }
 .carousel__btn_type_left::before {
   background-image: url("../images/left.svg");
@@ -137,15 +137,18 @@
 
 .carousel__btn:disabled {
   cursor: default;
+  opacity: 1;
 }
 
 @media screen and (max-width: 393px) {
   .carousel {
-    margin-top: 146px;
+    margin-top: 100px;
   }
   .carousel__grid {
     display: grid;
-    gap: 20px;
+    width: 100%;
+    max-width: 353px;
+    gap: 32px;
     grid-template-areas:
       "card card card"
       "left flip right";
@@ -174,7 +177,7 @@
   .carousel__card {
     width: 100%;
     max-width: 353px;
-    height: 460px;
+    height: 420px;
     grid-area: card;
     grid-column: 1 / 4;
     grid-row: 1;

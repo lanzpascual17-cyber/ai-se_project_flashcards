@@ -8,9 +8,11 @@
 }
 .header__title {
   font-weight: 900;
-  font-size: 24px;
+  font-size: 20px;
   letter-spacing: -0.24px;
+  white-space: nowrap;
 }
 .header__link {
   text-decoration: none;
+  white-space: nowrap;
 }

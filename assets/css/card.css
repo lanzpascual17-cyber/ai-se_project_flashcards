@@ -60,6 +60,9 @@
   width: 24px;
   height: 24px;
   cursor: pointer;
+  position: relative;
+  z-index: 2;
+  opacity: 0.5;
 }
 .card__row {
   display: flex;
@@ -108,7 +111,7 @@
 @media screen and (max-width: 393px) {
   .card {
     width: 100%;
-    height: auto;
-    aspect-ratio: 65 / 41;
+    height: 205;
+    aspect-ratio: auto;
   }
 }

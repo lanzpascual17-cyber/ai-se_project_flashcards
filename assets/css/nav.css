@@ -7,10 +7,11 @@
   margin: 0;
   padding: 0;
   display: flex;
+  white-space: nowrap;
 }
 
 .nav__item {
-  margin-left: 20px;
+  margin-left: 12px;
 }
 @media screen and (max-width: 393px) {
   .nav__item {
